@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="icon" type="image/jpg" href="/favicon.ico.jpg">
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Tom Sawyer Painters - Professional House Painting</title>
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+ :root {
+ --primary: #1a1a1a;
+ --accent: #c9a962;
+ --light: #faf9f7;
+ --dark: #0d0d0d;
+ }
+ 
+ body {
+ font-family: 'Inter', sans-serif;
+ background: var(--light);
+ color: var(--primary);
+ line-height: 1.6;
+ }
+ 
+ /* Header */
+ header {
+ background: #fff;
+ padding: 1rem 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 1px solid #eee;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ 
+ .logo {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 1.8rem;
+ letter-spacing: 2px;
+ color: var(--primary);
+ }
+ 
+ .logo span {
+ color: var(--accent);
+ }
+ 
+ nav a {
+ color: #666;
+ text-decoration: none;
+ margin-left: 2rem;
+ font-weight: 500;
+ transition: color 0.3s;
+ }
+ 
+ nav a:hover {
+ color: var(--accent);
+ }
+ 
+ /* Hero */
+ .hero {
+ background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+ color: #fff;
+ padding: 5rem 2rem;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+ 
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: radial-gradient(circle at 30% 70%, rgba(201, 169, 98, 0.15) 0%, transparent 50%);
+ }
+ 
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ max-width: 800px;
+ margin: 0 auto;
+ }
+ 
+ .hero h1 {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: clamp(2.5rem, 8vw, 4.5rem);
+ letter-spacing: 3px;
+ margin-bottom: 0.5rem;
+ line-height: 1.1;
+ }
+ 
+ .hero h1 span {
+ color: var(--accent);
+ }
+ 
+ .hero .tagline {
+ font-size: 1.3rem;
+ opacity: 0.9;
+ margin-bottom: 2rem;
+ font-weight: 300;
+ }
+ 
+ .hero .location-badge {
+ display: inline-block;
+ background: var(--accent);
+ color: var(--dark);
+ padding: 0.5rem 1.5rem;
+ border-radius: 50px;
+ font-weight: 600;
+ margin-bottom: 2rem;
+ }
+ 
+ .cta-button {
+ display: inline-block;
+ background: var(--accent);
+ color: var(--dark);
+ padding: 1rem 3rem;
+ font-size: 1.1rem;
+ font-weight: 700;
+ text-decoration: none;
+ border-radius: 8px;
+ transition: transform 0.3s, box-shadow 0.3s;
+ }
+ 
+ .cta-button:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 10px 30px rgba(201, 169, 98, 0.3);
+ }
+ 
+ /* Benefits */
+ .benefits {
+ padding: 5rem 2rem;
+ background: #fff;
+ }
+ 
+ .benefits-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 2rem;
+ max-width: 1100px;
+ margin: 0 auto;
+ }
+ 
+ .benefit-card {
+ text-align: center;
+ padding: 2rem;
+ border-radius: 12px;
+ background: var(--light);
+ transition: transform 0.3s;
+ }
+ 
+ .benefit-card:hover {
+ transform: translateY(-5px);
+ }
+ 
+ .benefit-card .icon {
+ font-size: 3rem;
+ margin-bottom: 1rem;
+ }
+ 
+ .benefit-card h3 {
+ font-size: 1.3rem;
+ margin-bottom: 0.5rem;
+ }
+ 
+ .benefit-card p {
+ color: #666;
+ font-size: 0.95rem;
+ }
+ 
+ /* Services */
+ .services {
+ padding: 5rem 2rem;
+ background: var(--light);
+ }
+ 
+ .services h2 {
+ text-align: center;
+ font-size: 2rem;
+ margin-bottom: 3rem;
+ }
+ 
+ .services-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 1.5rem;
+ max-width: 1100px;
+ margin: 0 auto;
+ }
+ 
+ .service-card {
+ padding: 2rem;
+ border: 2px solid #eee;
+ border-radius: 12px;
+ transition: border-color 0.3s;
+ text-align: center;
+ }
+ 
+ .service-card:hover {
+ border-color: var(--accent);
+ }
+ 
+ .service-card h3 {
+ font-size: 1.3rem;
+ margin-bottom: 0.5rem;
+ }
+ 
+ .service-card p {
+ color: #666;
+ font-size: 0.95rem;
+ }
+ 
+ .service-card .cta {
+ display: inline-block;
+ margin-top: 1rem;
+ color: var(--accent);
+ font-weight: 600;
+ text-decoration: none;
+ }
+ 
+ /* CTA Section */
+ .cta-section {
+ padding: 5rem 2rem;
+ background: linear-gradient(135deg, var(--accent) 0%, #d4b872 100%);
+ text-align: center;
+ }
+ 
+ .cta-section h2 {
+ font-size: 2rem;
+ margin-bottom: 1rem;
+ color: var(--dark);
+ }
+ 
+ .cta-section p {
+ font-size: 1.1rem;
+ margin-bottom: 2rem;
+ color: var(--dark);
+ opacity: 0.8;
+ }
+ 
+ /* Footer */
+ footer {
+ background: var(--primary);
+ color: rgba(255,255,255,0.6);
+ text-align: center;
+ padding: 3rem 2rem;
+ }
+ 
+ footer .logo {
+ color: #fff;
+ margin-bottom: 1rem;
+ display: block;
+ }
+ 
+ footer p {
+ font-size: 0.9rem;
+ }
+ 
+ /* Mobile */
+ @media (max-width: 768px) {
+ header {
+ flex-direction: column;
+ gap: 1rem;
+ }
+ 
+ nav a {
+ margin: 0 1rem;
+ }
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <a href="index.html" class="logo">TOM SAWYER <span>PAINTERS</span></a>
+ <nav>
+ <a href="#services">Services</a>
+ <a href="#contact">Contact</a>
+ </nav>
+ </header>
+
+ <section class="hero">
+ <div class="hero-content">
+ <h1>TOM SAWYER <span>PAINTERS</span></h1>
+ <p class="tagline">Professional residential painting. Quality work you can trust.</p>
+ <div class="location-badge">📍 Serving Wasatch Front</div>
+ <br><br>
+ <a href="#services" class="cta-button">See Our Services</a>
+ </div>
+ </section>
+
+ <section class="benefits" id="benefits">
+ <div class="benefits-grid">
+ <div class="benefit-card">
+ <div class="icon">🎨</div>
+ <h3>Quality Paint</h3>
+ <p>We use premium paints and materials for long-lasting results.</p>
+ </div>
+ <div class="benefit-card">
+ <div class="icon">⚡️</div>
+ <h3>Fast Service</h3>
+ <p>Most projects completed on time. We respect your schedule.</p>
+ </div>
+ <div class="benefit-card">
+ <div class="icon">💰</div>
+ <h3>Fair Pricing</h3>
+ <p>Competitive rates with no hidden fees. Free estimates.</p>
+ </div>
+ <div class="benefit-card">
+ <div class="icon">✨</div>
+ <h3>Clean Work</h3>
+ <p>We protect your furniture and landscaping. Clean up when done.</p>
+ </div>
+ </div>
+ </section>
+
+ <section class="services" id="services">
+ <h2>Our Services</h2>
+ <div class="services-grid">
+ <div class="service-card">
+ <h3>🏠 Exterior Painting</h3>
+ <p>House siding, stucco, brick, and trim. Curb appeal that lasts.</p>
+ </div>
+ <div class="service-card">
+ <h3>🪟 Interior Painting</h3>
+ <p>Walls, ceilings, trim, and cabinets. Transform your living space.</p>
+ </div>
+ <div class="service-card">
+ <h3>🪵 Deck & Fence</h3>
+ <p>Wood staining and sealing. Protect and beautify your outdoor spaces.</p>
+ </div>
+ <div class="service-card">
+ <h3>🚪 Doors & Trim</h3>
+ <p>Interior and exterior doors, baseboards, and crown molding.</p>
+ </div>
+ </div>
+ </section>
+
+ <section class="cta-section" id="contact">
+ <h2>Let's Get Started</h2>
+ <p>Call or text us today for a free estimate!</p>
+ 
+ <a href="tel:8018109719" class="cta-button" style="background: var(--dark); color: #fff; font-size: 1.2rem; padding: 1.2rem 2.5rem; margin-right: 1rem;">📞 Call or Text: 801-810-9719</a>
+ 
+ <form id="contact-form" action="https://hook.us2.make.com/ajr2e8ggxpxit7cf97c3bqberjmodxz8" method="POST" style="max-width: 500px; margin: 2rem auto 0; background: #fff; padding: 2rem; border-radius: 12px; text-align: left;">
+ <div style="margin-bottom: 1rem;">
+ <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark);">Name</label>
+ <input type="text" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+ </div>
+ <div style="margin-bottom: 1rem;">
+ <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark);">Email</label>
+ <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+ </div>
+ <div style="margin-bottom: 1rem;">
+ <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark);">Phone</label>
+ <input type="tel" name="phone" style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+ </div>
+ <div style="margin-bottom: 1.5rem;">
+ <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark);">Message</label>
+ <textarea name="message" rows="4" style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+ </div>
+ <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">📨 Send Message</button>
+ </form>
+ 
+ <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--dark);">Serving Salt Lake County & Utah County</p>
+ </section>
+
+ <footer>
+ <span class="logo">TOM SAWYER <span>PAINTERS</span></span>
+ <p>Professional Residential Painting | Serving Salt Lake County & Utah County</p>
+ <p style="margin-top: 1rem; opacity: 0.6;">© 2026 Tom Sawyer Painters. All rights reserved.</p>
+ </footer>
+</body>
+</html>
