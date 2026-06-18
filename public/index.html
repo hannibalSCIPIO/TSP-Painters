@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="icon" type="image/jpg" href="/favicon.ico.jpg">
+ <link rel="icon" type="image/jpeg" href="/child-silhouette.jpg">
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Tom Sawyer Painters - Professional House Painting</title>
+ <title>Tom Sawyer Painter - Professional House Painting</title>
  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
  <style>
  * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,6 +37,17 @@
  }
  
  .logo {
+ display: flex;
+ align-items: center;
+ gap: 0.75rem;
+ }
+ 
+ .logo img {
+ height: 50px;
+ width: auto;
+ }
+ 
+ .logo-text {
  font-family: 'Bebas Neue', sans-serif;
  font-size: 1.8rem;
  letter-spacing: 2px;
@@ -252,9 +263,20 @@
  }
  
  footer .logo {
- color: #fff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 0.75rem;
  margin-bottom: 1rem;
- display: block;
+ }
+ 
+ footer .logo img {
+ height: 40px;
+ width: auto;
+ }
+ 
+ footer .logo-text {
+ color: #fff;
  }
  
  footer p {
@@ -276,7 +298,10 @@
 </head>
 <body>
  <header>
- <a href="index.html" class="logo">TOM SAWYER <span>PAINTERS</span></a>
+ <a href="index.html" class="logo">
+ <img src="/child-silhouette.jpg" alt="Tom Sawyer Painter" />
+ <span class="logo-text">TOM SAWYER <span>PAINTER</span></span>
+ </a>
  <nav>
  <a href="#services">Services</a>
  <a href="#contact">Contact</a>
@@ -286,7 +311,7 @@
 
  <section class="hero">
  <div class="hero-content">
- <h1>TOM SAWYER <span>PAINTERS</span></h1>
+ <h1>TOM SAWYER <span>PAINTER</span></h1>
  <p class="tagline">Professional residential painting. Quality work you can trust.</p>
  <div class="location-badge">📍 Serving Wasatch Front</div>
  <br><br>
@@ -371,9 +396,12 @@
  </section>
 
  <footer>
- <span class="logo">TOM SAWYER <span>PAINTERS</span></span>
+ <span class="logo">
+ <img src="/child-silhouette.jpg" alt="Tom Sawyer Painter" />
+ <span class="logo-text">TOM SAWYER <span>PAINTER</span></span>
+ </span>
  <p>Professional Residential Painting | Serving Salt Lake County & Utah County</p>
- <p style="margin-top: 1rem; opacity: 0.6;">© 2026 Tom Sawyer Painters. All rights reserved.</p>
+ <p style="margin-top: 1rem; opacity: 0.6;">© 2026 Tom Sawyer Painter. All rights reserved.</p>
  </footer>
 </body>
 </html>
